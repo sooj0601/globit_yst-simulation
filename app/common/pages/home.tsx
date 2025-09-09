@@ -9,7 +9,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export function loader() {
-  return redirect('/monitoring');
+  return redirect('/simulation');
 }
 
 export default function Home() {

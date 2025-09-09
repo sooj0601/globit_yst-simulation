@@ -20,8 +20,6 @@ export default function Header() {
             loading="lazy"
           />
         </Link>
-        {/* 양식장 선택 : 모바일 숨김 */}
-        <FarmSelect className="hidden md:block mr-auto" />
         {/* 데스크탑 전용 영역 */}
         <div className="hidden lg:flex items-center gap-16">
           <Nav />

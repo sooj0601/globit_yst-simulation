@@ -41,7 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-
+        <div id="datepicker-portal"></div>
         <ScrollRestoration />
         <Scripts />
       </body>

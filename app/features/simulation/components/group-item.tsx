@@ -85,7 +85,7 @@ export default function GroupItemLine({
   else {
     return (
       <div
-        className={`min-h-auto md:min-h-[426px] border-4 rounded-2xl p-4 ${stateClass} ${groupColorMap[colorName]} ${className} `}
+        className={`min-h-auto md:min-h-[186px] border-4 rounded-2xl p-4 ${stateClass} ${groupColorMap[colorName]} ${className} `}
       >
         <div
           className={`flex items-center pb-3 mb-3 justify-between gap-6 lg:gap-20 border-b ${borderColorMap[colorName]}`}

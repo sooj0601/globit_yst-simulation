@@ -34,3 +34,10 @@ body {
 .react-datepicker__triangle {
 	display: none !important;
 }
+.react-datepicker-popper {
+	z-index: 9999 !important;
+}
+.react-datepicker-portal {
+	position: absolute;
+	z-index: 9999;
+}

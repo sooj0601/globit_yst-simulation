@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
 
-export function DataTable({
+export function CommTable({
     className = '',
     children,
   }: {
@@ -20,7 +20,7 @@ export function DataTable({
     if (direction === 'down') container.scrollBy({ top: amount, behavior: 'smooth' });
   };
   return (
-    <div className={`relative pb-12 ${className}`}>
+    <div className={`relative lg:pb-12 ${className}`}>
       {/* 가로 스크롤 화살표 */}
       <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-2 z-24">
         <button onClick={() => scroll('left')} className="w-10 h-10 flex items-center justify-center cursor-pointer hover:text-slate-800 text-slate-500">
@@ -40,7 +40,7 @@ export function DataTable({
   );
 }
 
-export function DataTableHead({ className = '', children}: {
+export function CommTableHead({ className = '', children}: {
   className?: string;
   children?: React.ReactNode;
 }) {
@@ -51,15 +51,15 @@ export function DataTableHead({ className = '', children}: {
   );
 }
 
-type DataTableThProps = React.ThHTMLAttributes<HTMLTableCellElement> & {
+type CommTableThProps = React.ThHTMLAttributes<HTMLTableCellElement> & {
   className?: string;
   children?: React.ReactNode;
 };
-export function DataTableTh({
+export function CommTableTh({
     className = '',
     children,
     ...props
-  }: DataTableThProps) {
+  }: CommTableThProps) {
   return (
     <th
       className={`p-2 text-white text-sm text-nowrap ${className}`}
@@ -69,22 +69,21 @@ export function DataTableTh({
     </th>
   );
 }
-type DataTableTdProps = React.TdHTMLAttributes<HTMLTableCellElement> & {
+type CommTableTdProps = React.TdHTMLAttributes<HTMLTableCellElement> & {
   bgColor?: boolean;
   className?: string;
 };
 
-export function DataTableTd({
+export function CommTableTd({
     className = '',
     children,
-    bgColor = false,
     ...props
-  }: DataTableTdProps) {
+  }: CommTableTdProps) {
 
 
   return (
     <td
-      className={`border border-slate-300 py-2 px-2 text-center ${bgColor ? 'bg-slate-50' : ''} ${className}`}
+      className={`border-b border-b-slate-300 py-2 px-2 text-center bg-slate-50 ${className}`}
       {...props}
     >
       {children}
@@ -92,7 +91,7 @@ export function DataTableTd({
   );
 }
 
-export function DataTableFoot({ className = '', children}: {
+export function CommTableFoot({ className = '', children}: {
   className?: string;
   children?: React.ReactNode;
 }) {
