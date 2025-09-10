@@ -51,7 +51,7 @@ export function AccordionDataTable({ headers, rows }: AccordionDataTableProps) {
     <CommTable className="!w-full">
       <CommTableHead>
         <tr>
-          <CommTableTh className="w-14"/> {/* 화살표 자리 */}
+          <CommTableTh className="w-14"/>
           {headers.map((h, i) => (
             <CommTableTh key={i}>{h}</CommTableTh>
           ))}

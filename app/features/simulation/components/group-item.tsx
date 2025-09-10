@@ -74,9 +74,9 @@ export default function GroupItemLine({
         <div
           className={`flex items-center pb-3 mb-3 justify-between border-b border-slate-300`}
         >
-          <p className={`font-bold text-md md:text-lg text-slate-500 grow`}>
+          <div className={`font-bold text-md md:text-lg text-slate-500 grow`}>
             <Input type="text" placeholder="입식 그룹 이름을 입력하세요" value="" />
-          </p>
+          </div>
         </div>
         <div className="flex flex-wrap gap-4">{children}</div>
       </div>
@@ -90,11 +90,11 @@ export default function GroupItemLine({
         <div
           className={`flex items-center pb-3 mb-3 justify-between gap-6 lg:gap-20 border-b ${borderColorMap[colorName]}`}
         >
-          <p className={`font-bold text-md md:text-lg grow ${textColorMap[colorName]}`}>
+          <div className={`font-bold text-md md:text-lg grow ${textColorMap[colorName]}`}>
             {mode === 'edit' ? (<Input type="text" placeholder="입식 그룹 이름을 입력하세요" value="" />) : (
               `${groupName}`
             )}
-          </p>
+          </div>
           <div>
             {mode === 'edit' ? (
               <a

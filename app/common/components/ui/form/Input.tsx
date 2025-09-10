@@ -147,7 +147,6 @@ const Input: React.FC<InputProps> = ({
         <input
           type={isPassword && showPassword ? 'text' : type}
           name={name}
-          // 컨트롤드/언컨트롤드 둘 다 지원
           {...(value !== undefined ? { value } : { defaultValue })}
           placeholder={placeholder}
           onChange={handleChange}
