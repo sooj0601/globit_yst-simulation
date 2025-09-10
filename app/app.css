@@ -41,3 +41,10 @@ body {
 	position: absolute;
 	z-index: 9999;
 }
+
+
+.custom-swiper-button-prev.swiper-button-disabled,
+.custom-swiper-button-next.swiper-button-disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}

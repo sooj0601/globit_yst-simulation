@@ -15,11 +15,11 @@ type NavItemProps = {
 };
 
 export default function NavItem({
-                                  label,
-                                  to,
-                                  subMenu,
-                                  className,
-                                }: NavItemProps) {
+    label,
+    to,
+    subMenu,
+    className,
+  }: NavItemProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
@@ -64,6 +64,7 @@ export default function NavItem({
       ) : (
         <NavLink
           to={to || '#'}
+          end
           className={({ isActive }) =>
             `flex items-center text-lg h-12 px-2 lg:px-4 py-2 ${className} ${
               isActive ? 'font-bold text-blue-600' : 'font-medium'

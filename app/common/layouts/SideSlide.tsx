@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Nav from './Nav';
-import FarmSelect from '../components/modules/FarmSelect';
 import UserInfo from '../components/modules/UserInfo';
 import { X } from 'lucide-react';
 import NavItem from '../components/ui/layout/NavItem';
-import AdminNav from "~/common/layouts/AdminNav";
 
 type SideSlideProps = {
   open: boolean;
@@ -40,7 +38,7 @@ export default function SideSlide({ open, onClose }: SideSlideProps) {
   return (
     <div
       ref={backdropRef}
-      className={`fixed inset-0 z-50 bg-black/40 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[9999] bg-black/40 transition-opacity duration-300 ${
         open
           ? 'opacity-100 pointer-events-auto'
           : 'opacity-0 pointer-events-none'
@@ -58,7 +56,6 @@ export default function SideSlide({ open, onClose }: SideSlideProps) {
               <X size={32} strokeWidth={1.5} />
             </button>
           </div>
-          <FarmSelect className="w-full block md:hidden" />
         </div>
         <Nav />
         <div className="border-t border-slate-300"></div>

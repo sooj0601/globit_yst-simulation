@@ -31,7 +31,7 @@ export function DataTable({
           <ChevronRight size={32}/>
         </button>
       </div>
-      <div ref={tableContainerRef} className="relative w-full overflow-x-auto overflow-y-auto rounded-2xl">
+      <div ref={tableContainerRef} className="relative w-full overflow-x-auto overflow-y-auto">
         <table className={`relative w-max table-fixed border-collapse ${className}`}>
           {children}
         </table>
@@ -45,7 +45,7 @@ export function DataTableHead({ className = '', children}: {
   children?: React.ReactNode;
 }) {
   return (
-    <thead className={`sticky top-0 bg-slate-600 z-10 ${className}`}>
+    <thead className={`sticky top-0 z-10 ${className}`}>
       {children}
     </thead>
   );
@@ -62,7 +62,7 @@ export function DataTableTh({
   }: DataTableThProps) {
   return (
     <th
-      className={`p-2 text-white text-sm text-nowrap ${className}`}
+      className={`p-2 text-sm text-nowrap text-center border-b border-b-slate-800 ${className}`}
       {...props}
     >
       {children}

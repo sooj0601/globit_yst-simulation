@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 type CustomBtnProps = {
   size?: 'xs' | 'sm' | 'lg' | 'icon';
-  variant?: 'default' | 'primary' | 'secondary' | 'gray' | 'danger' | 'ghost' | 'outline';
+  variant?: 'default' | 'primary' | 'secondary' | 'gray' | 'danger' | 'ghost' | 'outline' | 'red' | 'blue' | 'green' | 'yellow';
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   children?: ReactNode;
@@ -50,6 +50,9 @@ export default function CustomBtn({
     case 'primary':
       variantClass = 'bg-blue-500 text-white hover:bg-blue-700';
       break;
+    case 'blue':
+      variantClass = 'bg-blue-500 text-white hover:bg-blue-700 border border-blue-700';
+      break;
     case 'secondary':
       variantClass = 'bg-gray-100 text-gray-800 hover:bg-gray-200';
       break;
@@ -59,14 +62,23 @@ export default function CustomBtn({
     case 'danger':
       variantClass = 'bg-rose-500 text-white hover:bg-rose-300';
       break;
+    case 'red':
+      variantClass = 'bg-rose-500 text-white hover:bg-rose-700 border border-rose-700';
+      break;
     case 'ghost':
       variantClass = 'text-blue-500 hover:bg-slate-100';
       break;
     case 'outline':
       variantClass = 'border border-slate-800 bg-white hover:bg-slate-200';
       break;
+    case 'green':
+      variantClass = 'bg-green-500 text-white hover:bg-green-700 border border-green-700';
+      break;
+    case 'yellow':
+      variantClass = 'bg-yellow-400 text-white hover:bg-yellow-600 border border-yellow-600';
+      break;
   }
-  const baseClass = `inline-flex items-center justify-center font-bold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer ${sizeClass} ${variantClass} ${className}`;
+  const baseClass = `inline-flex items-center justify-center font-bold transition-colors duration-200 cursor-pointer ${sizeClass} ${variantClass} ${className}`;
   const content = (
     <>
       {leftIcon && <span className="flex-shrink-0">{leftIcon}</span>}

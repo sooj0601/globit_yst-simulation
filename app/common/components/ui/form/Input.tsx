@@ -103,7 +103,7 @@ const Input: React.FC<InputProps> = ({
   if (isDate) {
     const selected = parseDate(value ?? defaultValue);
     return (
-      <div className={`flex flex-col z-[9999] ${className}`}>
+      <div className={`flex flex-col ${className}`}>
         <ReactDatePicker
           selected={selected}
           onChange={(date) => {

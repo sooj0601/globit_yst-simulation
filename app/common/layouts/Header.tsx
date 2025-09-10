@@ -16,7 +16,7 @@ export default function Header() {
           <img
             src={'/assets/logo.svg'}
             alt="양식통 로고"
-            className="size-8"
+            className="h-6 lg:h-7"
             loading="lazy"
           />
         </Link>
